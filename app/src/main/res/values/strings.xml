@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ninja Note</string>
+
+    <string name="category">NINJA_NOTE</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">NO\nDATA</string>
+
+</resources>
