@@ -25,8 +25,7 @@ public class LayoutNinja001 extends NinjaBaseActivity {
         setTitle(label);
 
         try {
-            setContentView(layoutId == -1 ? R.layout.layout_empty_001 :
-                    R.layout.activity_layout_showcase001);
+            setContentView(layoutId == -1 ? R.layout.layout_empty_001 : layoutId);
         } catch (Exception e) {
             setContentView(R.layout.layout_empty_001);
             Toast.makeText(appCtx, "No such layout", Toast.LENGTH_LONG)

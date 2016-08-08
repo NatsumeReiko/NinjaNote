@@ -6,4 +6,5 @@ public class PhotoInfoData {
     public static final int viewType = Constant.VT_PHOTO_INFO;
     public String info;
     public int picId;
+    public int layoutId;
 }

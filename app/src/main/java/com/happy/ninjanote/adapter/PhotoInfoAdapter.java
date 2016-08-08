@@ -30,7 +30,7 @@ public class PhotoInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 case R.id.info_pic: {
                     Toast.makeText(appCtx, "info_pic clicked:" + data.info, Toast.LENGTH_SHORT)
                             .show();
-                    LayoutNinja001.launch(appCtx, -1, "no layout");
+                    LayoutNinja001.launch(appCtx, data.layoutId, data.info);
                 }
                 break;
             }
@@ -47,6 +47,21 @@ public class PhotoInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     private void makeDataList() {
+        /*layout 2*/
+        final PhotoInfoData data002 = new PhotoInfoData();
+        data002.info = " system message ";
+        data002.picId = R.drawable.undertale_001;
+        data002.layoutId = R.layout.layout_002_system_msg;
+        dataList.add(data002);
+
+        /*layout 1*/
+        final PhotoInfoData data001 = new PhotoInfoData();
+        data001.info = " two progressbar loading ";
+        data001.picId = R.drawable.undertale_001;
+        data001.layoutId = R.layout.layout_001_loading;
+        dataList.add(data001);
+
+
         for (int index = 0; index < 100; index++) {
             final PhotoInfoData data = new PhotoInfoData();
             data.info = " aa " + index + " aa ";
