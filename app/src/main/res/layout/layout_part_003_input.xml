@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="THIS IS TITLE"
+        android:textColor="#009ad4"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/input_new_mail_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_corner_8dp_gray_empty"
+        android:hint="INPUT SOMETHING HERE"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColorHint="#c5c5c5"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

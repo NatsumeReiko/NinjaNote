@@ -47,12 +47,6 @@ public class PhotoInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     private void makeDataList() {
-        /*layout 2*/
-        final PhotoInfoData data002 = new PhotoInfoData();
-        data002.info = " system message ";
-        data002.picId = R.drawable.undertale_001;
-        data002.layoutId = R.layout.layout_002_system_msg;
-        dataList.add(data002);
 
         /*layout 1*/
         final PhotoInfoData data001 = new PhotoInfoData();
@@ -60,6 +54,28 @@ public class PhotoInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         data001.picId = R.drawable.undertale_001;
         data001.layoutId = R.layout.layout_001_loading;
         dataList.add(data001);
+
+        /*layout 2*/
+        final PhotoInfoData data002 = new PhotoInfoData();
+        data002.info = " system message ";
+        data002.picId = R.drawable.undertale_001;
+        data002.layoutId = R.layout.layout_002_system_msg;
+        dataList.add(data002);
+
+         /*layout 3*/
+        final PhotoInfoData data003 = new PhotoInfoData();
+        data003.info = " input ";
+        data003.picId = R.drawable.undertale_001;
+        data003.layoutId = R.layout.layout_003_input_box;
+        dataList.add(data003);
+
+         /*layout 4*/
+        final PhotoInfoData data004 = new PhotoInfoData();
+        data004.info = " show a picture ";
+        data004.picId = R.drawable.undertale_001;
+        data004.layoutId = R.layout.layout_004_show_pic;
+        dataList.add(data004);
+
 
 
         for (int index = 0; index < 100; index++) {

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="THIS IS TITLE"
+        android:textColor="#777777"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="280dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="12dp"
+        android:background="#f03"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:text="THIS IS SUBTITLE"
+        android:textColor="#777777"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/NinjaButton"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="8dp"
+        android:text="OK"
+        android:textColor="#666"
+        android:textSize="22sp" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:background="#ffffff"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_part_003_input" />
+
+    <include
+        layout="@layout/layout_part_002_confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:clipChildren="false" />
+
+</LinearLayout>
