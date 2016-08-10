@@ -2,7 +2,9 @@ package com.happy.ninjanote.layoutbox;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.happy.ninjanote.R;
@@ -32,6 +34,24 @@ public class LayoutNinja001 extends NinjaBaseActivity {
                     .show();
         }
 
+        if (layoutId == R.layout.layout_005_shine_stuff) {
+            shineStuff();
+        }
+    }
+
+    /*R.layout.layout_005_shine_stuff customize*/
+    private void shineStuff() {
+        final ImageView img = (ImageView) findViewById(R.id.picture);
+        if (img != null) {
+            ((AnimationDrawable) img.getBackground()).start();
+        }
+
+        final ImageView img01 = (ImageView) findViewById(R.id.picture_01);
+        if (img01 != null) {
+            ((AnimationDrawable) img01.getBackground()).start();
+        }
+
+
     }
 
     public void getLayoutId() {
@@ -53,9 +73,10 @@ public class LayoutNinja001 extends NinjaBaseActivity {
 
     /**
      * launch activity
-     * @param appCtx app context
+     *
+     * @param appCtx   app context
      * @param layoutId layout ID
-     * @param label title
+     * @param label    title
      */
     public static void launch(final Context appCtx,
                               final int layoutId,
