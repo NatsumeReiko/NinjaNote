@@ -78,6 +78,18 @@ public class PhotoInfoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         data005.layoutId = R.layout.layout_005_shine_stuff;
         dataList.add(data005);
 
+        final PhotoInfoData data006 = new PhotoInfoData();
+        data006.info = " round box ";
+        data006.picId = R.drawable.undertale_001;
+        data006.layoutId = R.layout.layout_006_funny_input_box;
+        dataList.add(data006);
+
+        final PhotoInfoData data007 = new PhotoInfoData();
+        data007.info = " music ";
+        data007.picId = R.drawable.undertale_001;
+        data007.layoutId = R.layout.layout_007_music;
+        dataList.add(data007);
+
         for (int index = 0; index < 100; index++) {
             final PhotoInfoData data = new PhotoInfoData();
             data.info = " aa " + index + " aa ";

@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -17,6 +20,19 @@ import com.happy.ninjanote.utility.KeyValue;
 public class LayoutNinja001 extends NinjaBaseActivity {
     private int layoutId = -1;
     private String label = "";
+
+    /*************/
+    private ImageView musicTop, musicBody;
+    private View musicView;
+    private final Animation musicUp = AnimationUtils.loadAnimation(appCtx, R.anim.up_001);
+    private final Animation musicDown = AnimationUtils.loadAnimation(appCtx, R.anim.down_001);
+    private int count_007_music = 0;
+    private static final int MAX_COUNT_007_MUSIC = 7;
+    private static final int[] MUSIC_007_PARTS = {
+            R.id.set_001, R.id.set_002, R.id.set_003, R.id.set_004,
+            R.id.set_005, R.id.set_006, R.id.set_007};
+
+    /*************/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +50,15 @@ public class LayoutNinja001 extends NinjaBaseActivity {
                     .show();
         }
 
-        if (layoutId == R.layout.layout_005_shine_stuff) {
-            shineStuff();
+        switch (layoutId) {
+            case R.layout.layout_005_shine_stuff: {
+                shineStuff();
+            }
+            break;
+            case R.layout.layout_007_music: {
+                layout_007_music();
+            }
+            break;
         }
     }
 
@@ -71,13 +94,6 @@ public class LayoutNinja001 extends NinjaBaseActivity {
     }
 
 
-    /**
-     * launch activity
-     *
-     * @param appCtx   app context
-     * @param layoutId layout ID
-     * @param label    title
-     */
     public static void launch(final Context appCtx,
                               final int layoutId,
                               final String label) {
@@ -94,4 +110,78 @@ public class LayoutNinja001 extends NinjaBaseActivity {
         appCtx.startActivity(intent);
     }
 
+    public void layout_007_music() {
+        musicUp.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                musicTop.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                musicTop.startAnimation(musicDown);
+                musicBody.startAnimation(musicDown);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        musicDown.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                musicTop.setVisibility(View.INVISIBLE);
+                musicStart();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                // none.
+            }
+        });
+
+        musicStart();
+    }
+
+    private void musicStart() {
+        if (count_007_music == MAX_COUNT_007_MUSIC) {
+            count_007_music = 0;
+        }
+
+        musicView = findViewById(MUSIC_007_PARTS[count_007_music]);
+        count_007_music++;
+        cleanMusic();
+        musicTop = (ImageView) musicView.findViewById(R.id.top);
+        musicBody = (ImageView) musicView.findViewById(R.id.body);
+
+        musicTop.startAnimation(musicUp);
+        musicBody.startAnimation(musicUp);
+    }
+
+    private void cleanMusic() {
+        if (musicTop != null) {
+            musicTop.clearAnimation();
+        }
+        if (musicBody != null) {
+            musicBody.clearAnimation();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        cleanMusic();
+        if (musicUp != null) {
+            musicUp.cancel();
+        }
+        if (musicDown != null) {
+            musicDown.cancel();
+        }
+    }
 }
