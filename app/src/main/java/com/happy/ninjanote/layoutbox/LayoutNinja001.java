@@ -149,7 +149,7 @@ public class LayoutNinja001 extends NinjaBaseActivity {
     }
 
     private void musicStart() {
-        if (count_007_music == MAX_COUNT_007_MUSIC) {
+        if (count_007_music >= MAX_COUNT_007_MUSIC) {
             count_007_music = 0;
         }
 

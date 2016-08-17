@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/layout_showcase_card_parent_height"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:paddingBottom="@dimen/layout_showcase_card_parent_padding"
     android:paddingEnd="@dimen/layout_showcase_card_parent_padding_2"
     android:paddingStart="@dimen/layout_showcase_card_parent_padding_2"
@@ -13,29 +15,20 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_showcase_card_height"
-        card_view:cardCornerRadius="@dimen/layout_showcase_card_corner"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        card_view:cardBackgroundColor="@android:color/transparent"
         card_view:cardElevation="0dp">
 
-        <ImageView
+        <TextView
             android:id="@+id/info_pic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/undertale_001" />
+            android:background="@drawable/bg_corner_8dp_pink"
+            android:scaleType="centerCrop" />
 
-        <TextView
-            android:id="@+id/info_text"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_showcase_card_info_height"
-            android:layout_gravity="bottom"
-            android:background="@drawable/photo_info_panel_bottom_background"
-            android:ellipsize="end"
-            android:gravity="center_vertical"
-            android:paddingEnd="@dimen/padding_05"
-            android:paddingStart="@dimen/padding_05"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:text="aaaaaaaaaaaaaaaaaaaaa" />
+        <include
+            android:id="@+id/set_001"
+            layout="@layout/layout_007_part_001" />
     </android.support.v7.widget.CardView>
 </LinearLayout>

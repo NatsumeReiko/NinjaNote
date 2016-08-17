@@ -38,7 +38,17 @@
         <activity
             android:name=".layoutbox.LayoutNinja001"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="layoutbox/LayoutShowcase001"/>
+            android:label="layoutbox/LayoutShowcase001" />
+        <activity
+            android:name=".layoutbox.AnimationInRecycler"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Layout Box/AnimationInRecycler">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="NINJA_NOTE" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

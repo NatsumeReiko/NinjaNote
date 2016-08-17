@@ -10,6 +10,8 @@
         android:id="@+id/top"
         android:layout_width="30dp"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
+        tools:visibility="visible"
         android:scaleType="centerInside"
         android:src="@drawable/star_01" />
 

@@ -4,7 +4,7 @@
     android:background="#fff"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:gravity="center_vertical"
+    android:gravity="center"
     android:orientation="horizontal">
 
     <include
@@ -13,8 +13,6 @@
 
     <include
         android:id="@+id/set_002"
-        android:clipChildren="false"
-        android:clipToPadding="false"
         layout="@layout/layout_007_part_002" />
 
     <include
