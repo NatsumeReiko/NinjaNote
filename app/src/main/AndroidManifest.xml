@@ -49,6 +49,16 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".layoutbox.ListItemShowcase"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Layout Box/ListItemShowcase">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="NINJA_NOTE" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

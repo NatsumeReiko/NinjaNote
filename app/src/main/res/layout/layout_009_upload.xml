@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="#FFff9d00"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:paddingEnd="12dp"
+    android:paddingStart="12dp">
+
+    <ImageView
+        android:id="@+id/video"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/video_32_fff" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_toStartOf="@id/video"
+        android:scaleType="center"
+        android:src="@drawable/camera_32_fff"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/camera"
+        android:background="@drawable/bg_corner_100dp_white"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/pen_16_gray"
+        android:hint="WRITE DOWN"
+        android:maxLines="3"
+        android:paddingLeft="9dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#FFc7c7c7"
+        android:textSize="14dp" />
+
+</RelativeLayout>
+
+

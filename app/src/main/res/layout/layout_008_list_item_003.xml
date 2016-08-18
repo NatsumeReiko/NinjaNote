@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_linear"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height"
+    android:background="#bbb"
+    android:clipChildren="false"
+    android:paddingStart="11dp">
+
+    <ImageView
+        android:id="@+id/right_panel"
+        android:layout_width="110dp"
+        android:layout_height="@dimen/item_height"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/star_02" />
+
+    <CheckBox
+        android:checked="true"
+        android:layout_marginEnd="10dp"
+        android:button="@null"
+        android:background="@drawable/selector_checkbox"
+        android:id="@+id/icon_check"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/circle_with_pic" />
+
+    <ImageView
+        android:id="@+id/icon_face"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_toEndOf="@id/icon_check"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/circle_with_pic" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@id/icon_face"
+        android:layout_toStartOf="@id/right_panel"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="9dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="NICKNAME"
+            android:textColor="#29abe2"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:lines="1"
+            android:text="SUBTITLE"
+            android:textColor="#ffae00"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/info_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickname"
+            android:lines="1"
+            android:text="SUBTITLE2"
+            android:textColor="#818181"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
