@@ -15,18 +15,19 @@ public class Constant {
 
     /*group stat*/
     public static final int VT_PHOTO_INFO = 1;
+    public static final int V_T_INFO_001 = VT_PHOTO_INFO + 1;
 
     private Constant() {
     }
 
-    @IntDef({VT_PHOTO_INFO
+    @IntDef({VT_PHOTO_INFO,
+            V_T_INFO_001
     })
     @Retention(RetentionPolicy.SOURCE)
 
     public @interface ShowCaseViewType {
     }
     /*group end*/
-
 
 
     public static Bundle addLayoutId(@NonNull final Bundle bundle, final int layoutId) {

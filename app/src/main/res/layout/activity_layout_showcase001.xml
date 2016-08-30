@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:background="#ddd"
+    android:background="#fff"
     tools:context="com.happy.ninjanote.layoutbox.LayoutShowcase001">
 
     <android.support.v7.widget.RecyclerView

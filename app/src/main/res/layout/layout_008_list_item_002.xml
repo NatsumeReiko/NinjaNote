@@ -3,7 +3,7 @@
     android:id="@+id/background_linear"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_height"
-    android:background="#ccc"
+    android:background="@drawable/bg_bottom_border_001"
     android:clipChildren="false"
     android:paddingStart="11dp">
 

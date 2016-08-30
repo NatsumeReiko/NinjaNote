@@ -5,5 +5,7 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">NO\nDATA</string>
+    <string name="cl_bg_title">Click me to change BACKGROUND color</string>
+    <string name="cl_title">Click me to change TITLE color</string>
 
 </resources>

@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/color_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#999"
+        android:gravity="center"
+        android:text="click me to change background color"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corner_8dp_gray"
+            android:gravity="center"
+            android:text="0xFF"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cl_03"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corner_8dp_gray_empty"
+            android:gravity="center"
+            android:text="65"
+            android:textColor="#888"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cl_02"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corner_8dp_gray_empty"
+            android:gravity="center"
+            android:text="e1"
+            android:textColor="#888"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cl_01"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corner_8dp_gray_empty"
+            tools:background="@drawable/bg_corner_8dp_pink_empty"
+            android:gravity="center"
+            android:text="5c"
+            android:textColor="#888"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,13 +1,18 @@
 package com.happy.ninjanote.adapter;
 
 import android.content.Context;
+import android.support.annotation.IntDef;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.happy.ninjanote.layoutbox.LayoutNinja001;
+import com.happy.ninjanote.layoutbox.ListHeaderShowcase;
 import com.happy.ninjanote.layoutbox.ListItemShowcase;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
 public class ListItemShowcaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -18,20 +23,45 @@ public class ListItemShowcaseAdapter extends RecyclerView.Adapter<RecyclerView.V
     private final int originalDataSize;
 
     private final int dataType;
-    public static final int ONLY_ONE_TYPE = 1;
-    public static final int NOT_ONLY_ONE_TYPE = ONLY_ONE_TYPE + 1;
-    public static final int NONE_TYPE = 1 + NOT_ONLY_ONE_TYPE;
+    private static final int ONLY_ONE_TYPE = 1;
+    private static final int NOT_ONLY_ONE_TYPE = ONLY_ONE_TYPE + 1;
+    private static final int NONE_TYPE = 1 + NOT_ONLY_ONE_TYPE;
+
+    private final int categoryType;
+    public static final int LIST_ITEM = 1;
+    public static final int ACTIVITY_HEADER = LIST_ITEM + 1;
+
+    @IntDef({LIST_ITEM,
+            ACTIVITY_HEADER})
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface CategoryType {
+    }
 
     /*listener for recycler views */
     private View.OnClickListener itemClicked = new View.OnClickListener() {
         @Override
         public void onClick(final View view) {
-            ListItemShowcase.launch(appCtx, (int) view.getTag());
+            final int tag = (int) view.getTag();
+            switch (categoryType) {
+                case LIST_ITEM: {
+                    ListItemShowcase.launch(appCtx, tag);
+                }
+                break;
+                case ACTIVITY_HEADER: {
+                    ListHeaderShowcase.launch(appCtx, tag);
+                    LayoutNinja001.launch(appCtx, tag, String.valueOf(tag));
+
+                }
+                break;
+            }
         }
     };
 
-    public ListItemShowcaseAdapter(final Context appContext, final List<Integer> layoutId) {
+    public ListItemShowcaseAdapter(final Context appContext,
+                                   final List<Integer> layoutId,
+                                   @CategoryType final int categoryType) {
         this.appCtx = appContext;
+        this.categoryType = categoryType;
         inflater = LayoutInflater.from(appContext);
         this.layoutId = layoutId;
         if (layoutId == null || layoutId.size() == 0) {
