@@ -21,8 +21,13 @@ public class Info001ViewHolder<T extends InfoData001> extends BaseViewHolder<T> 
                          final View.OnClickListener clickListener) {
         if (data.infoInt001_01 != -1) {
             rootView.setBackgroundColor(data.infoInt001_01);
-        }else {
+        } else {
             rootView.setBackgroundColor(0xff65e15c);
+        }
+        if (data.infoInt001_02 != -1) {
+            title.setTextColor(data.infoInt001_02);
+        } else {
+            title.setTextColor(0xffffffff);
         }
 
         rootView.setTag(data);

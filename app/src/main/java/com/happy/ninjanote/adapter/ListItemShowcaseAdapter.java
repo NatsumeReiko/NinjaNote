@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.happy.ninjanote.layoutbox.LayoutNinja001;
-import com.happy.ninjanote.layoutbox.ListHeaderShowcase;
 import com.happy.ninjanote.layoutbox.ListItemShowcase;
 
 import java.lang.annotation.Retention;
@@ -48,9 +46,6 @@ public class ListItemShowcaseAdapter extends RecyclerView.Adapter<RecyclerView.V
                 }
                 break;
                 case ACTIVITY_HEADER: {
-                    ListHeaderShowcase.launch(appCtx, tag);
-                    LayoutNinja001.launch(appCtx, tag, String.valueOf(tag));
-
                 }
                 break;
             }

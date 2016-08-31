@@ -21,32 +21,17 @@ public class InfoAdapter001<T extends InfoData001>
     protected List<T> dataList = new ArrayList<>();
     private final Context appCtx;
     private View.OnClickListener itemClicked;
-    private int itemCount;
+    private int itemCount = 0;
 
 
-    public InfoAdapter001(final Context appContext) {
+    public InfoAdapter001(final Context appContext, List<T> original) {
         this.appCtx = appContext;
         inflater = LayoutInflater.from(appContext);
 
-        makeDataList();
+        dataList.addAll(original);
         itemCount = dataList.size();
 
         itemClicked = makeListener();
-    }
-
-    @SuppressWarnings("unchecked")
-    protected void makeDataList() {
-
-        for (int index = 0xfffcd000; index < 0xfffcd0ff; ) {
-            final InfoData001 data = new InfoData001();
-            data.infoStr001_01 = "color:0x" + Integer.toHexString(index);
-            data.infoInt001_01 = index;
-            data.viewType = Constant.V_T_INFO_001;
-
-            index += 20;
-            dataList.add((T) data);
-
-        }
     }
 
 
@@ -56,14 +41,8 @@ public class InfoAdapter001<T extends InfoData001>
             @Override
             public void onClick(final View view) {
                 final T data = (T) view.getTag();
-                Toast.makeText(appCtx, "info_pic clicked:" + data.infoStr001_01, Toast.LENGTH_SHORT)
+                Toast.makeText(appCtx, "clicked:" + data.infoStr001_01, Toast.LENGTH_SHORT)
                         .show();
-
-                switch (view.getId()) {
-                    case R.id.info_pic: {
-                    }
-                    break;
-                }
             }
         };
     }

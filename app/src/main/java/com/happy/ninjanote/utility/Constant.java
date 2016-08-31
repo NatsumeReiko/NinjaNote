@@ -29,6 +29,27 @@ public class Constant {
     }
     /*group end*/
 
+    /*header start*/
+    public static final int CL_01 = 1;
+    public static final int CL_02 = CL_01 + 1;
+    public static final int CL_03 = CL_02 + 1;
+    public static final int CL_04 = CL_03 + 1;
+    public static final int CL_05 = CL_04 + 1;
+    public static final int CL_06 = CL_05 + 1;
+
+    @IntDef({CL_01,
+            CL_02,
+            CL_03,
+            CL_04,
+            CL_05,
+            CL_06
+    })
+    @Retention(RetentionPolicy.SOURCE)
+
+    public @interface CLIndex {
+    }
+    /*header end*/
+
 
     public static Bundle addLayoutId(@NonNull final Bundle bundle, final int layoutId) {
         if (layoutId <= 0) {
