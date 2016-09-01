@@ -14,7 +14,7 @@ import com.happy.ninjanote.utility.Constant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InfoAdapter001<T extends InfoData001>
+public abstract class InfoAdapter001<T extends InfoData001>
         extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final LayoutInflater inflater;

@@ -42,6 +42,21 @@ public class ListHeaderShowcase extends LayoutShowcase002 {
         super.onCreate(savedInstanceState);
     }
 
+    public void makeData2() {
+        int base = 20;
+
+
+        Log.d("testt", "base:" + Integer.toBinaryString(base));
+        for (int index = 0; index < 33; index++) {
+            Log.d("testt", "base << " + index + ":" + Integer.toBinaryString(base << index));
+        }
+        for (int index = 0; index < 33; index++) {
+            Log.d("testt", "base << " + index + ":" + Integer.toHexString(base << index));
+        }
+
+
+    }
+
     public void makeData() {
         final Intent intent = getIntent();
         bgColor = intent.getIntExtra(KEY_BG_COLOR, -1);
@@ -62,13 +77,13 @@ public class ListHeaderShowcase extends LayoutShowcase002 {
             case Constant.CL_02: {
                 start = (bgColor & 0xffff00ff);
                 end = (bgColor | 0xff00ff00);
-                shift = 2;
+                shift = 8;
             }
             break;
             case Constant.CL_03: {
                 start = (bgColor & 0xff00ffff);
                 end = (bgColor | 0xffff0000);
-                shift = 4;
+                shift = 16;
             }
             break;
             case Constant.CL_04: {
@@ -81,7 +96,7 @@ public class ListHeaderShowcase extends LayoutShowcase002 {
                 start = (titleColor & 0xffff00ff);
                 end = (titleColor | 0xff00ff00);
                 isBgColor = false;
-                shift = 2;
+                shift = 8;
 
             }
             break;
@@ -89,25 +104,19 @@ public class ListHeaderShowcase extends LayoutShowcase002 {
                 start = (titleColor & 0xff00ffff);
                 end = (titleColor | 0xffff0000);
                 isBgColor = false;
-                shift = 4;
+                shift = 16;
 
             }
             break;
         }
 
-        int forLog = 0;
-        int forLog1 = 0;
+        String bgClStr = "", titleClStr = "", tmpStr, tmpStr1, tmpStr2, tmpStr3;
 
-        for (int index = start, count = 1; index <= end; count++) {
+        for (int index = start; index <= end; ) {
             final InfoData001 data = new InfoData001();
             data.viewType = Constant.V_T_INFO_001;
 
-            forLog = count * 10;
-            forLog1 = (forLog << shift);
-
-            index += forLog1;
-            Log.d("testt", Integer.toHexString(forLog) + " shift: "
-                    + Integer.toHexString(forLog1) + " index:" + Integer.toHexString(index));
+            index += (5 << shift);
 
             if (isBgColor) {
               /*background color*/
@@ -121,8 +130,70 @@ public class ListHeaderShowcase extends LayoutShowcase002 {
                 data.infoInt001_02 = index;
             }
 
-            data.infoStr001_01 = "background/title: "
-                    + Integer.toHexString(data.infoInt001_01) + "/" + Integer.toHexString(data.infoInt001_02);
+            switch (colorIndex) {
+                case Constant.CL_01: {
+                    tmpStr = Integer.toHexString(data.infoInt001_01);
+                    tmpStr1 = tmpStr.substring(0, 6);
+                    tmpStr2 = " " + tmpStr.substring(6) + " ";
+                    bgClStr = tmpStr1 + tmpStr2;
+
+                    titleClStr = Integer.toHexString(data.infoInt001_02);
+
+                }
+                break;
+                case Constant.CL_02: {
+                    tmpStr = Integer.toHexString(data.infoInt001_01);
+                    tmpStr1 = tmpStr.substring(0, 4);
+                    tmpStr2 = " " + tmpStr.substring(4, 6) + " ";
+                    tmpStr3 = tmpStr.substring(6);
+                    bgClStr = tmpStr1 + tmpStr2 + tmpStr3;
+
+                    titleClStr = Integer.toHexString(data.infoInt001_02);
+                }
+                break;
+                case Constant.CL_03: {
+                    tmpStr = Integer.toHexString(data.infoInt001_01);
+                    tmpStr1 = tmpStr.substring(0, 2);
+                    tmpStr2 = " " + tmpStr.substring(2, 4) + " ";
+                    tmpStr3 = tmpStr.substring(4);
+                    bgClStr = tmpStr1 + tmpStr2 + tmpStr3;
+
+                    titleClStr = Integer.toHexString(data.infoInt001_02);
+                }
+                break;
+                case Constant.CL_04: {
+                    tmpStr = Integer.toHexString(data.infoInt001_02);
+                    tmpStr1 = tmpStr.substring(0, 6);
+                    tmpStr2 = " " + tmpStr.substring(6) + " ";
+                    titleClStr = tmpStr1 + tmpStr2;
+
+                    bgClStr = Integer.toHexString(data.infoInt001_01);
+                }
+                break;
+                case Constant.CL_05: {
+                    tmpStr = Integer.toHexString(data.infoInt001_02);
+                    tmpStr1 = tmpStr.substring(0, 4);
+                    tmpStr2 = " " + tmpStr.substring(4, 6) + " ";
+                    tmpStr3 = tmpStr.substring(6);
+                    titleClStr = tmpStr1 + tmpStr2 + tmpStr3;
+
+                    bgClStr = Integer.toHexString(data.infoInt001_01);
+                }
+                break;
+                case Constant.CL_06: {
+                    tmpStr = Integer.toHexString(data.infoInt001_02);
+                    tmpStr1 = tmpStr.substring(0, 2);
+                    tmpStr2 = " " + tmpStr.substring(2, 4) + " ";
+                    tmpStr3 = tmpStr.substring(4);
+                    titleClStr = tmpStr1 + tmpStr2 + tmpStr3;
+
+
+                    bgClStr = Integer.toHexString(data.infoInt001_01);
+                }
+                break;
+            }
+            data.infoStr001_01 = "bkground/title: "
+                    + bgClStr + "/" + titleClStr;
             dataList.add(data);
         }
 
