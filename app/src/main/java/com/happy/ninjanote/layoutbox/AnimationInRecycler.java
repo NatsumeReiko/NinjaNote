@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.happy.ninjanote.R;
 import com.happy.ninjanote.adapter.AnimaInRecyclerAdapter;
+import com.happy.ninjanote.base.NinjaBaseActivity;
 
 /**
  * AnimationInRecycler

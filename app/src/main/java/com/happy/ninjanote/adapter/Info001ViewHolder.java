@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.happy.ninjanote.R;
+import com.happy.ninjanote.base.BaseViewHolder;
 import com.happy.ninjanote.data.InfoData001;
 
 public class Info001ViewHolder<T extends InfoData001> extends BaseViewHolder<T> {

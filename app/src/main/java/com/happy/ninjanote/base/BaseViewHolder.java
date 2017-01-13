@@ -1,9 +1,9 @@
-package com.happy.ninjanote.adapter;
+package com.happy.ninjanote.base;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
+public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
 
     public BaseViewHolder(View itemView) {
         super(itemView);

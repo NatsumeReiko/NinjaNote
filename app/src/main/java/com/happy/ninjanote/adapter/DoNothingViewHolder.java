@@ -2,6 +2,8 @@ package com.happy.ninjanote.adapter;
 
 import android.view.View;
 
+import com.happy.ninjanote.base.BaseViewHolder;
+
 public class DoNothingViewHolder extends BaseViewHolder<Object> {
 
     public DoNothingViewHolder(View itemView) {

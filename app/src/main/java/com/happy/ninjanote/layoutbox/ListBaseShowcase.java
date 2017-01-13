@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.happy.ninjanote.R;
 import com.happy.ninjanote.adapter.ListItemShowcaseAdapter;
+import com.happy.ninjanote.base.NinjaBaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;

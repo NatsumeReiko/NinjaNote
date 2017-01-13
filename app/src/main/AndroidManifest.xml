@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.happy.ninjanote">
+          package="com.happy.ninjanote">
+
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -10,9 +13,9 @@
         android:theme="@style/SimpleFullscreenTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -31,54 +34,67 @@
             android:label="Layout Box/LayoutShowcase001"
             android:theme="@style/FullscreenTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="NINJA_NOTE" />
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="NINJA_NOTE"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".layoutbox.LayoutNinja001"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="layoutbox/LayoutShowcase001" />
+            android:label="layoutbox/LayoutShowcase001"/>
         <activity
             android:name=".layoutbox.AnimationInRecycler"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Layout Box/AnimationInRecycler">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="NINJA_NOTE" />
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="NINJA_NOTE"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".layoutbox.ListItemShowcase"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Layout Box/ListItemShowcase">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="NINJA_NOTE" />
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="NINJA_NOTE"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".layoutbox.ListHeaderShowcase"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Layout Box/HeaderShowcase">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="NINJA_NOTE" />
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="NINJA_NOTE"/>
+            </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".layoutbox.HeaderShowcaseLauncher"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="Layout Box/HeaderShowcaseLauncher">
+            android:label="Layout Box/HeaderShowcaseLauncher"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="NINJA_NOTE" />
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="NINJA_NOTE"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".animation.AnimationActivity001"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Animation/Simple"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="NINJA_NOTE"/>
+            </intent-filter>
         </activity>
     </application>
 

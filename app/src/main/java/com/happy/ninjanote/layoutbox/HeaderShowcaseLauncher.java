@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.happy.ninjanote.R;
+import com.happy.ninjanote.base.NinjaBaseActivity;
 import com.happy.ninjanote.utility.Constant;
 
 import yuku.ambilwarna.AmbilWarnaDialog;

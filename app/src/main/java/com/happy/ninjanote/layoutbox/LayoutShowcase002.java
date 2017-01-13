@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.happy.ninjanote.R;
 import com.happy.ninjanote.adapter.InfoAdapter002;
+import com.happy.ninjanote.base.NinjaBaseActivity;
 import com.happy.ninjanote.data.InfoData001;
 import com.happy.ninjanote.utility.Constant;
 

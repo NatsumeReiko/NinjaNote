@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.happy.ninjanote.R;
+import com.happy.ninjanote.base.BaseViewHolder;
 import com.happy.ninjanote.data.PhotoInfoData;
 
 public class PhotoInfoViewHolder extends BaseViewHolder<PhotoInfoData> {

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.happy.ninjanote.R;
+import com.happy.ninjanote.base.NinjaBaseActivity;
 import com.happy.ninjanote.utility.Constant;
 import com.happy.ninjanote.utility.KeyValue;
 

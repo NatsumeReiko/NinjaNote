@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="120dp"
+              android:clipChildren="false"
+              android:clipToPadding="false"
+              android:paddingBottom="@dimen/layout_showcase_card_parent_padding"
+              android:paddingEnd="@dimen/layout_showcase_card_parent_padding_2"
+              android:paddingStart="@dimen/layout_showcase_card_parent_padding_2"
+              android:paddingTop="@dimen/layout_showcase_card_parent_padding">
+
+    <TextView
+        android:id="@+id/text_001"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_corner_8dp_pink"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        android:textColor="#333"
+        android:textSize="20sp"/>
+</LinearLayout>

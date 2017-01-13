@@ -3,6 +3,7 @@ package com.happy.ninjanote.adapter;
 import android.view.View;
 
 import com.happy.ninjanote.R;
+import com.happy.ninjanote.base.BaseViewHolder;
 import com.happy.ninjanote.data.PhotoInfoData;
 
 public class AnimInRecyclerViewHolder extends BaseViewHolder<PhotoInfoData> {
